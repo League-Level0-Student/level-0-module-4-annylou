@@ -20,7 +20,7 @@ public class StarStudent {
 		// temporarily "flip" the value between true and false.
 		
 		// 3. Use a ! on the boolean variable in either your method call or in 
-		//    the didYouPass method itself to get the other pop-up to show 
+		//    the didYouPass method to get the other pop-up to show 
 		//    without changing the original value you gave to passedExam.
 		
 	}
@@ -28,10 +28,10 @@ public class StarStudent {
 	public static void didYouPass(boolean passedExam) {
 		
 		if(passedExam) {
-			JOptionPane.showMessageDialog(null, "Congratulations!");
+			JOptionPane.showMessageDialog(null, "Congratulations");
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "Better luck next time!");
+			JOptionPane.showMessageDialog(null, "Better luck next time");
 		}
 		
 	}
