@@ -8,6 +8,7 @@ import javax.sound.sampled.Clip;
 
 import processing.core.PApplet;
 import processing.core.PImage;
+import javax.swing.JOptionPane;
 
 /*
  * Goal: Create a Where's Waldo game!
@@ -40,28 +41,53 @@ import processing.core.PImage;
 public class WheresWaldo extends PApplet {
     static final int WIDTH = 600;
     static final int HEIGHT = 400;
-
+  
     PImage waldo;
 
     @Override
     public void settings() {
         size(WIDTH, HEIGHT);
+        
     }
 
     @Override
     public void setup() {
-        
+        waldo = loadImage("waldo.jpg");
+        waldo.resize(WIDTH, HEIGHT);
+        if(mousePressed) {
+        	if(mouseY>=201) {
+        		if(mouseX>=375) {
+        			playWhoohoo();
+        			JOptionPane.showMessageDialog(null, 1);
+        		}
+        		if(mouseX<=411) {
+        			playWhoohoo();
+        			JOptionPane.showMessageDialog(null, 1);
+        		}
+        	}
+        	if(mouseY<=271) {
+        		if(mouseX>=375) {
+        			playWhoohoo();
+        			JOptionPane.showMessageDialog(null, 1);
+        		}
+        		if(mouseX<=411) {
+        			playWhoohoo();
+        			JOptionPane.showMessageDialog(null, 1);
+        		}
+        	}
+        }
     }
 
     @Override
     public void draw() {
-        
+        background(waldo);
+        println("X: " + mouseX + " Y: " + mouseY);
     }
 
     static public void main(String[] args) {
         PApplet.main(WheresWaldo.class.getName());
     }
-
+//375-411, 201,271
     /*********************** DO NOT MODIFY THE CODE BELOW ********************/
 
     Clip clip = null;
