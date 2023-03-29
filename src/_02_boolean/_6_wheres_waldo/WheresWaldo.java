@@ -77,7 +77,7 @@ public class WheresWaldo extends PApplet {
         	}
         }
     }
-
+  
     static public void main(String[] args) {
         PApplet.main(WheresWaldo.class.getName());
     }
