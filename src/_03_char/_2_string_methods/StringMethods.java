@@ -5,24 +5,24 @@ public class StringMethods {
 	public static void main(String[] args) {
 		
 		// 1. Create a String variable and initialize it to contain a minimum of 3 characters
-String word = "one";
+String one = "one";
 
 		// 2. Print the 3rd char of your String to the console.
 		//    HINT: .charAt
-char three = word.charAt(2);
-	System.out.println(three);
+char word = one.charAt(2);
+	System.out.println(word);
 	
 		// 3. Print the length of your String to the console.
 		//    HINT: .length()
-int length = word.length();
+int length = one.length();
 		System.out.println(length);
 		// 4. Using a for loop, print one char at time to the console.
 		//    HINT: use .length() to determine how many loops
 		
 		int number = 0;
 		for(length=0; length<=2; length+=1) {
-		three = word.charAt(0 + number);
-		System.out.println(three);
+		word = one.charAt(0 + number);
+		System.out.println(word);
 		number++;
 			}
 		// 5. Pick a char inside your String, and use a loop to determine
@@ -32,17 +32,12 @@ int length = word.length();
 		//             for char 'b', then print "b is at index 1"
 		
 		
-		System.out.println(three);
+		for(word=0; word<1; word++) {
+			if(one.equals("one")) {
+				System.out.println(+word +" is " );
+			}
+		}
 	
-		if(word.equals("one")) {
-			System.out.println("e is 2");
-		}
-		else if(word.equals("one")) {
-			System.out.println("n is 1");
-		}
-		else if(word.equals("one")) {
-			System.out.println("o is 0");
-		}
 	
 	 
 }
