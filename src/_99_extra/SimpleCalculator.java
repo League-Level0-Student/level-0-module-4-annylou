@@ -7,17 +7,32 @@ public class SimpleCalculator {
 	public static void main(String[] args) {
 
 		// 1. Get 2 numbers from the user and convert them to integer.
+		int i = 0;
+		while(i<4) {
 String a = JOptionPane.showInputDialog("input a number");
 String b = JOptionPane.showInputDialog("input another number");
 int one = Integer.parseInt(a);
 int two = Integer.parseInt(b);
 		// 2. Customize pop-up to support add/subtract/multiply/divide operations.
 		int operation = JOptionPane.showOptionDialog(null, "question", " ", 0,
-				JOptionPane.INFORMATION_MESSAGE, null, new String[] { "divide", "multiply", "subtract", "add" },
-				null);
-
+		JOptionPane.INFORMATION_MESSAGE, null, new String[] { "+", "-", "*", "/" }, null);
+		
 		// 5. Call the methods created in steps 3 and 4 to perform the appropriate operation.
 
+	if(operation==0) {
+		add(one, two);
+	}
+	if(operation==1) {
+		subtract(one, two);
+	}
+	if(operation==2) {
+		multiply(one, two);
+	}
+	if(operation==3) {
+		divide(one, two);
+	}
+		i++;
+	}
 		// 6. Wrap steps 1, 2 and 5 in a for loop to repeat calculator operations
 	
 	}
@@ -43,9 +58,4 @@ static void divide(int one, int two) {
 	// 4. Create similar methods for subtraction, multiplication and division.
 
 }
-//int subtract = one-two;
-//JOptionPane.showMessageDialog(null, +one +" - " +two +" = " +subtract);
-//int multiply = one*two;
-//JOptionPane.showMessageDialog(null, +one +" * " +two +" = " +multiply);
-//int divide = one/two;
-//JOptionPane.showMessageDialog(null, +one +" / " +two +" = " +divide);
+
