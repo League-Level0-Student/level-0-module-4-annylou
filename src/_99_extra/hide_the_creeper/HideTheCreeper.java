@@ -7,6 +7,8 @@ public class HideTheCreeper extends PApplet {
     static final int WIDTH = 600;
     static final int HEIGHT = 400;
     PImage creeper;
+    int x = 485;
+    int y = 86;
     @Override
     public void settings() {
         size(WIDTH, HEIGHT);
@@ -19,13 +21,22 @@ public class HideTheCreeper extends PApplet {
     	background(minecraft); 
     	creeper=loadImage("creeper.png"); 
     	creeper.resize(10, 10);
-    }
 
+    }
+    
     @Override
     public void draw() {
-    	image(creeper, mouseX, mouseY);
+    	image(creeper, x, y);
+    	if(mousePressed) {
+    		fill(255,0,0);
+    		if(mousePressed&&mouseX==x&&mouseY==y) {
+    			fill(0,255,0);
+    		}
+    	noStroke();
+    	ellipse(mouseX,mouseY, 10,10);
+    	}
     }
-
+   
     static public void main(String[] args) {
         PApplet.main(HideTheCreeper.class.getName());
     }

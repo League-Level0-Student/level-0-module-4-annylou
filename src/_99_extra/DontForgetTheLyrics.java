@@ -18,17 +18,29 @@ public class DontForgetTheLyrics {
 	
 	public static void main(String[] args) {
 		// 4. Make a pop-up to explain the game.
-
+JOptionPane.showMessageDialog(null, "read and then guess what song it was");
 		// 5. Use the playSound method to play your song.
-
+JOptionPane.showMessageDialog(null, "California girls\r\n"
+		+ "We're unforgettable");
 		// 6. Make a pop-up for the player to type their answer.
-
+String one = JOptionPane.showInputDialog("song one: ");
 		// 7. If they answered correctly, tell them that they were right.
-
+if(one.equals("california gurls")) {
+	JOptionPane.showMessageDialog(null, "correct");
+}
 		// 8. Otherwise, tell them they are wrong, and give them the answer.
-
+else {
+	JOptionPane.showMessageDialog(null, "no it was california gurls");
+}
 		// 9. Record another sound and repeat steps 5-8.
-
+JOptionPane.showMessageDialog(null, "And I'm in pieces (yo), baby, fix me (uh-huh)");
+String two = JOptionPane.showInputDialog("song two:");
+if(two.equals("baby")) {
+	JOptionPane.showMessageDialog(null, "correct");
+}
+else {
+	JOptionPane.showMessageDialog(null, "no it was baby");
+}
 		// 10. [optional] Add a points variable that will calculate their final score.
 	}
 
