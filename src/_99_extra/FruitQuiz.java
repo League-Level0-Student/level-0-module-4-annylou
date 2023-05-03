@@ -13,10 +13,9 @@ public class FruitQuiz extends KeyAdapter {
 	void makeQuestions() {
 		question1 = new JLabel("<html>Which is not a real fruit? <br> A: Dragon Fruit <br> B: Durian <br> C: Crazyberry</html>");
 		// 11. Make another question called "question2".  Use question1 above as a guide.
-		question2 = new JLabel("<html>2+1 <br> A: 1 <br> B: 2 <br> C: 3</html>");
-		question3 = new JLabel("<html>__ <br> A: a <br> B: b <br> C: c</html>");
-		question4 = new JLabel("<html>__ <br> A: x <br> B: y <br> C: z</html>");
-		question5 = new JLabel("<html>__ <br> A: 3 <br> B: 2 <br> C: 1</html>");
+		question2 = new JLabel("<html>what to the power of two is 9 <br> A: 1 <br> B: 2 <br> C: 3</html>");
+		question3 = new JLabel("<html>what is first letter of the alphabet <br> A: a <br> B: b <br> C: c</html>");
+		question4 = new JLabel("<html>what is the square root of 16 <br> A: 4 <br> B: 5 <br> C: 6</html>");
 	}
 
 	@Override
@@ -30,19 +29,10 @@ System.out.println(keyCode);
 		//IMPORTANT: The questions must be in reverse order from top to bottom to work properly
 		
 		// 12. If question2 is showing,
-		if(question5.isShowing()) {
-			if(keyPressed()) {
-				correct();
-			}
-			else {
-				incorrect();
-			}
-		}
 		
 		if(question4.isShowing()) {
 			if(keyPressed()) {
 				correct();
-				nextQuestion(question5);
 			}
 			else {
 				incorrect();
@@ -133,7 +123,6 @@ playSound("wrong.wav");
 		frame.addKeyListener(this);
 	}
 
-	JLabel question1 = new JLabel(), question2 = new JLabel(), question3 = new JLabel(), question4 = new JLabel(),
-			question5;
+	JLabel question1 = new JLabel(), question2 = new JLabel(), question3 = new JLabel(), question4 = new JLabel();
 }
 
