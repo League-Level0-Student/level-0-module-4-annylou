@@ -8,6 +8,7 @@ public class Pong extends PApplet {
 int x;
 int y;
 int xSpeed;
+int ySpeed;
     @Override
     public void settings() {
         size(WIDTH, HEIGHT);
@@ -20,10 +21,9 @@ int xSpeed;
 
     @Override
     public void draw() {
-    	x=10;
-    	y=10;
      	fill(0,166,198);
     	ellipse(x,10, 20,20);
+    	x=5;
     	
     	if(x>width) {
     		xSpeed = -xSpeed;

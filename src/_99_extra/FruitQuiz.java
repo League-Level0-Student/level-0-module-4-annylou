@@ -11,11 +11,12 @@ import javax.swing.JLabel;
 public class FruitQuiz extends KeyAdapter {
 
 	void makeQuestions() {
+		question4 = new JLabel("<html>what is the square root of 16 <br> A: 4 <br> B: 5 <br> C: 6</html>");
+		question3 = new JLabel("<html>what is first letter of the alphabet <br> A: a <br> B: b <br> C: c</html>");
+		question2 = new JLabel("<html>what is 4-1<br> A: 1 <br> B: 2 <br> C: 3</html>");
 		question1 = new JLabel("<html>Which is not a real fruit? <br> A: Dragon Fruit <br> B: Durian <br> C: Crazyberry</html>");
 		// 11. Make another question called "question2".  Use question1 above as a guide.
-		question2 = new JLabel("<html>what to the power of two is 9 <br> A: 1 <br> B: 2 <br> C: 3</html>");
-		question3 = new JLabel("<html>what is first letter of the alphabet <br> A: a <br> B: b <br> C: c</html>");
-		question4 = new JLabel("<html>what is the square root of 16 <br> A: 4 <br> B: 5 <br> C: 6</html>");
+
 	}
 
 	@Override
@@ -24,46 +25,19 @@ public class FruitQuiz extends KeyAdapter {
 		// 1. Print out the key code variable
 System.out.println(keyCode);
 		// 2. Make 3 int variables that hold the key codes for A, B, and C
-		int a; int b; int c;
+		int a=65; 
+		int b=66; 
+		int c=67;
 		// 14. Repeat steps 11, 12, and 13 for question3 and question4 - 
 		//IMPORTANT: The questions must be in reverse order from top to bottom to work properly
 		
 		// 12. If question2 is showing,
-		
-		if(question4.isShowing()) {
-			if(keyPressed()) {
-				correct();
-			}
-			else {
-				incorrect();
-			}
-		}
-		
-		if(question3.isShowing()) {
-			if(keyPressed()) {
-				correct();
-				nextQuestion(question4);
-			}
-			else {
-				incorrect();
-			}
-		}
-		
-		if(question2.isShowing()) {
-			if(keyPressed()) {
-				correct();
-				nextQuestion(question3);
-			}
-			else {
-				incorrect();
-			}
-		}
+	
 			// 13. check if it is right or wrong like you did for question1
 		
-			
 		if (question1.isShowing()) {
 			// 3. If they selected the right fruit, do steps 4 and 7
-			if(keyPressed()) {
+			if() {
 				correct();
 				nextQuestion(question2);
 			}
