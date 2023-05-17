@@ -32,7 +32,7 @@ int y;
     @Override
     public void draw() {
         background(donkey);
-        image(tail,  mouseX,  mouseY);
+        
         tail.resize(141, 134);
         if(dist(0,0, mouseX,mouseY) > 30) {
         	background(106,155,48);
@@ -49,6 +49,7 @@ int y;
         	image(tail, x,y);
         	playWhoohoo();
         }
+       
     }
 
     static public void main(String[] args) {

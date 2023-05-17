@@ -21,13 +21,16 @@ int ySpeed;
 
     @Override
     public void draw() {
-     	fill(0,166,198);
-    	ellipse(x,10, 20,20);
-    	x=5;
-    	
-    	if(x>width) {
-    		xSpeed = -xSpeed;
-    	}
+    fill(0,0,255);
+    noStroke();
+    ellipse(100, 100, 10,10);
+    if(x>width) {
+    	xSpeed = -xSpeed;
+    }
+    if(y>height) {
+    	ySpeed = -ySpeed;
+    }
+    
     }
 
     static public void main(String[] args) {

@@ -29,7 +29,7 @@ public class HideTheCreeper extends PApplet {
     	image(creeper, x, y);
     	if(mousePressed) {
     		fill(255,0,0);
-    		if(mousePressed&&mouseX-mouseY==x-y) {
+    		if(mousePressed&&mouseX==485&&mouseY==86) {
     			fill(0,255,0);
     		}
     	noStroke();

@@ -11,11 +11,13 @@ import javax.swing.JLabel;
 public class FruitQuiz extends KeyAdapter {
 
 	void makeQuestions() {
-		question4 = new JLabel("<html>what is the square root of 16 <br> A: 4 <br> B: 5 <br> C: 6</html>");
-		question3 = new JLabel("<html>what is first letter of the alphabet <br> A: a <br> B: b <br> C: c</html>");
-		question2 = new JLabel("<html>what is 4-1<br> A: 1 <br> B: 2 <br> C: 3</html>");
+
+	
 		question1 = new JLabel("<html>Which is not a real fruit? <br> A: Dragon Fruit <br> B: Durian <br> C: Crazyberry</html>");
-		// 11. Make another question called "question2".  Use question1 above as a guide.
+		question2 = new JLabel("<html>what is the first letter of the alphabet<br> A: b <br> B: c <br> C: a</html>");
+		question3 = new JLabel("<html>1+1=<br> A: window <br> B: 2 <br> C: 1^2</html>");
+		question4 = new JLabel("<html>why did the chicken cross the road<br> A: i don't know <br> B: to get to the other side <br>  C: why</html>");
+			// 11. Make another question called "question2".  Use question1 above as a guide.
 
 	}
 
@@ -34,10 +36,38 @@ System.out.println(keyCode);
 		// 12. If question2 is showing,
 	
 			// 13. check if it is right or wrong like you did for question1
+		if(question4.isShowing()) {
+			if(keyCode==a) {
+				correct();
+			}
+			else {
+				incorrect();
+			}
+		}
 		
-		if (question1.isShowing()) {
+		if(question3.isShowing()) {
+			if(keyCode==b) {
+				correct();
+				nextQuestion(question4);
+			}
+			else {
+				incorrect();
+			}
+		}
+		
+		if(question2.isShowing()) {
+			if(keyCode==c) {
+				correct();
+				nextQuestion(question3);
+			}
+			else {
+				incorrect();
+			}
+		}
+		
+		if(question1.isShowing()) {
 			// 3. If they selected the right fruit, do steps 4 and 7
-			if() {
+			if(keyCode==c) {
 				correct();
 				nextQuestion(question2);
 			}
