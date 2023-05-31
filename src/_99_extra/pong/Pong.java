@@ -6,7 +6,7 @@ import processing.core.PImage;
 public class Pong extends PApplet {
     static final int WIDTH = 600;
     static final int HEIGHT = 470;
-    PImage backgroundImage;
+    PImage image;
 int x;
 int y;
 int xSpeed;
@@ -20,12 +20,13 @@ int paddleY = 441;
 
     @Override
     public void setup() {
-    	backgroundImage = loadImage("grey.png");
+    	image = loadImage("grey.png");
+    	
     }
 
     @Override
     public void draw() {
-    	image(backgroundImage, 0,0, 600,470);
+    	image(image, 0,0, 600,470);
         fill(53,122,185);
         noStroke();
         ellipse(9, 9, 17,17);
@@ -44,7 +45,13 @@ boolean intersects(int x, int y, int paddleX, int paddleY, int paddleLength) {
 	if(y>paddleY && x>paddleX && x<paddleX+paddleLength) {
 		return true;
 	}
+	else { 
+		return false;
+	}
+		
 }
+
+
     static public void main(String[] args) {
         PApplet.main(Pong.class.getName());
     }
